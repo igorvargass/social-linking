@@ -34,6 +34,9 @@ body
 {
     /*shorthand (atalho)*/
     background: var(--bg-url) no-repeat top center/cover;
+
+    /*não deixar ficar sem imagem de fundo ao alterar dimensão de tela*/
+    height: 100vh;
 }
 
 body *
@@ -185,4 +188,19 @@ footer a
     padding: 24px 0;
     text-align: center;
     text-decoration: none;
+}
+
+/*media queries*/
+/*de 700px para cima valera as regras abaixo*/
+@media (min-width: 700px)
+{
+    :root
+    {
+        --bg-url: url(../assets/bg-desktop.jpg);
+    }
+
+    .light
+    {
+        --bg-url: url(../assets/bg-desktop-light.jpg);
+    }
 }
